@@ -21,3 +21,31 @@ import axios from "axios";
 
 };
 export default Chatt;
+
+// export const getStaticProps = async () => {
+//     const res = await fetch('http://localhost:5000/api/chat')
+//     const data = await res.json();
+
+//     return {
+//         props: { ninja: data}
+//     }
+// }
+
+// const User = ({user}) =>{
+//     return (
+//         <div>
+//             <h1>All</h1>
+//             {user.map(user => (
+//                 <div key = {user.id}> 
+//                 <a>
+//                     <h3>{user.name}</h3>
+//                 </a>
+//                 </div>
+//             ))}
+
+
+
+//         </div>
+//     );
+// }
+

@@ -6,6 +6,7 @@ import React from "react";
 import Chat from "../components/chat/Message";
 import History from "../components/chat/History";
 import CreateRoom from "../components/chat/CreateRoom";
+import UserMenu from "../components/chat/UserMenu";
 // import NewMessage from "./MessageInput";
 
 import {PlusOutlined, SearchOutlined, BellFilled, MenuOutlined, 
@@ -123,7 +124,15 @@ const items = [
      
       <Layout>
         <Header className = {styles.head}> 
-        <Button className = {styles.btn} icon={<SearchOutlined />}>Хэрэглэгч хайх </Button>
+        <Row>
+          <Col><Button className = {styles.btn} icon={<SearchOutlined />}>Хэрэглэгч хайх </Button> </Col>
+
+          <Col><BellFilled className={styles.bell}/></Col>
+          <Col> <UserMenu/> </Col>
+          <Col> Profile <SearchOutlined />  </Col>
+
+        </Row>
+        
       {/* <div className={styles.noti}>
         <Image
           alt="Monosolution is logo"
@@ -132,7 +141,8 @@ const items = [
           height={24}
         />
       </div> */}
-      <BellFilled className={styles.bell}/>
+      
+     
       
 
         </Header>
@@ -152,7 +162,6 @@ const items = [
             <Row>
               <History/>
             </Row>
-            
           {/* <button  className= {styles.btn} type="submit"> 
            Бүлэг үүсгэх <PlusOutlined/>                               
           </button> */}
@@ -163,6 +172,7 @@ const items = [
           Хэрэглэгч хайх                               
       </button> */}
        <Chat/>
+       
          {/* <input placeholder= "Message" className= {styles.message}> </input> */}
 
         </Content>
