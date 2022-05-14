@@ -1,37 +1,41 @@
 .side {
   background: rgb(247, 247, 244);
   border: 1px solid black;
-  color: rgb(243, 172, 172);
   height: 100vh;
   
 }
 .side2{
-  background: rgb(225, 181, 34);
+  background: white;
   border: 1px solid black;
+  display: flex;
+  /* border-radius: 2rem; */
+  /* height:100vh; */
+  margin: 40px 40px;
+  /* height: 500; */
+  border-radius: 1rem;
+
 
 }
+.side2 h1{
+  font-size: 25px;
+  margin: 25px;
+  
+}
+.newGroup{
+  margin-left: 40px;
+  justify-content: center; 
+  text-align: center;
+
+}
+/*header */
 .head{
-  background: yellow;
+  background: white;
   border: 1px solid black;
   margin-right: 10px;
   height: 60px;  /* margin-left: 10px; */
   /* border-radius: 1rem; */
 }
-/* .btn{
-  font-size: 16px;
-  position:flex;
-padding: 10px;
-border-radius: 1rem;
-background-color:rgb(240, 194, 7);
-border: none;
-cursor: pointer;
-width: auto;
-height: 30px;
-margin: 15px auto auto 15px;
 
-justify-content: center; 
-text-align: center;
-}  */
 .btn{
   background:yellow;
   border-radius: 1rem;
@@ -45,8 +49,19 @@ text-align: center;
 }
 .btn:hover {
   border:1px solid black;
-  background: rgb(134, 237, 241);
+  background: white;
 }
+.bell{
+  /* width:50px;
+  height:50px; */
+  font-size:25px;
+  margin-left:auto;
+  justify-content: right; 
+  text-align: center;
+  /* marginBottom: 16; */
+}
+/*sider*/
+
 .text{
   /* justify-content: center;  */
   /* text-align: center; */
@@ -57,15 +72,27 @@ text-align: center;
 }
 .footer{
   background: rgba(244, 234, 234, 0.3);
-  border: 1px solid black;
+  border: 1px none black;
+  height:50px;
+  text-align: center;
   
 }
 .content{
-  background: rgb(198, 236, 241);
-  margin-left: 10px;
-  margin-right: 10px;
+  background: white;
+  margin: 40px 40px;
+  /* height: 500; */
+  border-radius: 1rem;
 }
+.message{
+  margin-bottom: 20px;
+  
+}
+/* .input{
+  width:1000px;
+  margin-top: 700px;
+  border: 1px, solid, black;
 
+} */
 /* .container {
   padding: 0 2rem;
 }

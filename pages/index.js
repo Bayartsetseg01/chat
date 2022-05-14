@@ -3,13 +3,18 @@ import Image from "next/image";
 import "antd/dist/antd.css";
 import styles from "../styles/Home.module.css";
 import React from "react";
+import Chat from "../components/chat/Message";
+import History from "../components/chat/History";
+import CreateRoom from "../components/chat/CreateRoom";
+// import NewMessage from "./MessageInput";
 
-import {PlusOutlined, SearchOutlined, BellOutlined, MenuOutlined,
+import {PlusOutlined, SearchOutlined, BellFilled, MenuOutlined, 
+        LogoutOutlined, SettingOutlined,
         MenuUnfoldOutlined, MenuFoldOutlined ,  
         PieChartOutlined, DesktopOutlined, ContainerOutlined,
-        MailOutlined, AppstoreOutlined  } from '@ant-design/icons';
+        MailOutlined, AppstoreOutlined, HeartTwoTone,  } from '@ant-design/icons';
 
-import {Layout, Button, Menu, AutoComplete} from 'antd';
+import {Layout, Button, Menu, Row, Col, AutoComplete} from 'antd';
 
 const { Header, Footer, Sider, Content } =Layout;
 
@@ -24,20 +29,52 @@ function getItem(label, key, icon, children, type) {
 }
 //menu
 const items = [
-  getItem( <PieChartOutlined />),
-  getItem(<DesktopOutlined />),
-  getItem(<ContainerOutlined />),
-  getItem('Nav', 'sub1', <MailOutlined />, [
+  getItem('Цэс', '1', <PieChartOutlined 
+  style={{
+    fontSize:18,
+   
+
+  }}
+  />),
+  getItem('Чатбот', '2', <DesktopOutlined  style={{
+    fontSize:18,
+   
+
+  }} />),
+  getItem('Төлбөр', '3', <ContainerOutlined  style={{
+    fontSize:18,
+
+
+  }} />),
+  getItem('Nav', 'sub1', <MailOutlined  style={{
+    fontSize:18,
+  
+
+  }} />, [
     getItem( '5'),
     getItem('6'),
     getItem('7'),
     getItem('8'),
   ]),
-  getItem('Nav', 'sub2', <AppstoreOutlined />, [
+  getItem('Nav', 'sub2', <AppstoreOutlined  style={{
+    fontSize:18,
+  
+
+  }}/>, [
     getItem('9'),
     getItem( '10'),
     getItem('Submenu', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
   ]),
+
+  getItem('Гарах', '4',<LogoutOutlined style={{
+    fontSize:18,
+
+
+  }} />),
+  getItem('Тохиргоо', '5',<SettingOutlined style={{
+    fontSize:18,
+    marginTop:10,
+  }} />),
 ];
 //
 
@@ -52,13 +89,19 @@ const items = [
 
   return (
     <Layout>
-      <Sider  width = {80} className = {styles.side}>
+      <Sider  width = {150} className = {styles.side}>
+        <div
+      style={{
+        width: 25,
+      }}
+      ></div>
       <Button
         type="primary"
         onClick={toggleCollapsed}
         style={{
           width:80,
           height:60,
+          fontSize:24,
           marginBottom: 16,
       
         }}
@@ -81,34 +124,55 @@ const items = [
       <Layout>
         <Header className = {styles.head}> 
         <Button className = {styles.btn} icon={<SearchOutlined />}>Хэрэглэгч хайх </Button>
-
-      <p className={styles.text}> <PlusOutlined/> Chat - Connection </p>
-      <div className={styles.noti}>
+      {/* <div className={styles.noti}>
         <Image
           alt="Monosolution is logo"
           src="/bell.svg"
           width={100}
           height={24}
         />
-      </div>
+      </div> */}
+      <BellFilled className={styles.bell}/>
       
 
         </Header>
         <Layout>
-          <Sider width = {500} className = {styles.side2}>
-          
-        </Sider>
+          <Sider width = {400} className = {styles.side2}>
+            <Row>
+              <Col> 
+              <h1> Миний Чатны Түүх </h1>
+              </Col>
+              <Col>
+              <CreateRoom/>
+              
+
+              </Col>
+
+            </Row>
+            <Row>
+              <History/>
+            </Row>
+            
+          {/* <button  className= {styles.btn} type="submit"> 
+           Бүлэг үүсгэх <PlusOutlined/>                               
+          </button> */}
+           </Sider>
+        <Layout>
         <Content height= {200} className = {styles.content}>
-        <button  className= {styles.btn} type="submit">
+        {/* <button  className= {styles.btn} type="submit">
           Хэрэглэгч хайх                               
-      </button>
+      </button> */}
+       <Chat/>
+         {/* <input placeholder= "Message" className= {styles.message}> </input> */}
+
         </Content>
-        
+        {/* <Footer className = {styles.footer}> Made <HeartTwoTone twoToneColor="#eb2f96" />  by Bayartsetseg
+
+        </Footer> */}
+        </Layout>
         </Layout>
         
-        <Footer className = {styles.footer}>foo
-
-        </Footer>
+        
       </Layout>
     </Layout>
   //   <div className={styles.container}>

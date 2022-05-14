@@ -5,17 +5,27 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start1": "next start",
+    "start": "nodemon backend/server.js",
     "lint": "next lint"
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.7.0",
     "antd": "^4.20.2",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
     "next": "12.1.6",
+    "nodemon": "^2.0.16",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-router-dom": "^5.3.1"
   },
   "devDependencies": {
+    "@types/react": "^18.0.9",
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6"
   }

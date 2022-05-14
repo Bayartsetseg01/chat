@@ -14,3 +14,10 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.message{
+  margin-bottom: 20px;
+}
+.send{
+  border-radius: 1rem;
+}

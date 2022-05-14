@@ -1,0 +1,23 @@
+.newGroup{
+    margin:25px;
+    width:70px;
+    height:40px;
+    border-radius:0.7rem;
+    font-size:12px;
+  }
+.newGroup:hover{
+    /* background-color:yellow; */
+    color: blue;
+
+}
+.room{
+    background:yellow;
+    border-radius: 1rem;
+    width: 50px;
+    border: none;
+    margin: 10px;
+    height: 20px;
+    font-size:12px;
+    cursor: pointer;
+  
+  }
